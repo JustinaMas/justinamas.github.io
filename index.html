@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css" type="text/css" />
+  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+  <script language="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script language="javascript" type="text/javascript" src="lib/neuralnetwork.js"></script>
+  <script language="javascript" type="text/javascript" src="lib/matrix.js"></script>
+  <script language="javascript" type="text/javascript" src="main.js"></script>
+  <script language="javascript" type="text/javascript" src="geneticAlgorithm.js"></script>
+  <script language="javascript" type="text/javascript" src="agent.js"></script>
+  <script language="javascript" type="text/javascript" src="obstacle.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="title">
+            <div class="col-12 text-center">
+                <h1>AI Plays Parachute Cat Game</h1>
+            </div>
+            <div class="col-12 text-center">
+                <h3>Using neural network and genetic algorithm.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div id="canvascontainer-main"></div>
+            </div>
+            <div class="col-4 results-table">
+                        <div class="row">
+                            <p>Score: </p><span id="hs">0</span>
+                        </div>
+                        <div class="row">
+                            <p>High score: </p><span id="ahs">0</span>
+                        </div>
+                        <div class="row">
+                            <p>Obstacle score: </p><span id="obstaclesc">0</span>
+                        </div>
+                        <div class="row">
+                            <p>Best obstacle score: </p><span id="bestobstaclesc">0</span>
+                        </div>
+                        <div class="row">
+                            <p>Generation: </p><span id="gen">0</span>
+                        </div> 
+                        <div class="row">
+                            <p>Alive agents: </p><span id="alive">0</span>
+                        </div>     
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p>Speed:</p><input class="custom-range" id="speedSlider" type="range" min="1" max="10" value="2"> <span id="speed">2</span>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" id="best">Run best agent</button>
+                <button class="btn btn-secondary" id="pause">Pause</button>
+                <button id="create">Create file</button> <a download="info.csv" id="downloadlink" style="display: none">Download</a>
+            </div>
+        </div>
+    
+</div>
+</body>
+
+</html>
